@@ -8,3 +8,7 @@ A very simple app displaying all Formular 1 races in 2024
   - Time
   - Track information
   - Wiki links to the race and track
+
+- Tech stack: Symfony, PHP, RestAPI
+
+- Data provided by [Ergast API](https://ergast.com/mrd/)
