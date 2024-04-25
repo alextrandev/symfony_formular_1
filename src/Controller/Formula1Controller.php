@@ -2,17 +2,16 @@
 
 namespace App\Controller;
 
+use App\Service\CallApiService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-class Formula1Controller extends AbstractController
-{
-    #[Route('/formula1', name: 'app_formula1')]
-    public function index(): Response
-    {
+class Formula1Controller extends AbstractController {
+    #[Route('/', name: 'app_formula1')]
+    public function index(CallApiService $callApiService): Response {
         return $this->render('formula1/index.html.twig', [
-            'controller_name' => 'Formula1Controller',
+            'data' => $callApiService->getRacesIn2024()
         ]);
     }
 }
