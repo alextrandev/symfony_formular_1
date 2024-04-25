@@ -13,6 +13,7 @@ class CallApiService {
 
   public function getRacesIn2024(): array {
     $res = $this->httpClient->request("GET", "https://ergast.com/api/f1/2024.json");
+    // back up the api data using hosted json or local json
     return $res->toArray();
   }
 }
