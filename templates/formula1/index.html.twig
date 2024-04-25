@@ -17,32 +17,34 @@
 							{{ race.round }}
 						</p>
 					</div>
-					<div class="race_info">
-						<p>
-							Date:
-							{{ race.date }}
-						</p>
-						<p>
-							Time:
-							{{ race.time }}
-						</p>
-						<p>
-							More infos:
-							<a href="{{ race.url }}">Link</a>
-						</p>
-					</div>
-					<div class="track_info">
-						<p>
-							Name:
-							{{ race.Circuit.circuitName }}
-						</p>
-						<p>Location:
-							{{ race.Circuit.Location.locality }},
-							{{ race.Circuit.Location.country }}</p>
-						<p>More infos:
-							<a href="{{ race.Circuit.url }}">Link</a>
-						</p>
-
+					<div class="info">
+						<div class="race_info">
+							<p>
+								Date:
+								{{ race.date|date('d/m/Y') }}
+							</p>
+							<p>
+								Time:
+								{{ race.time|date('H:i') }}
+							</p>
+							<div class="info_link">
+								<a href="{{ race.url }}">More info</a>
+								<span class="material-symbols-outlined">open_in_new</span>
+							</div>
+						</div>
+						<div class="track_info">
+							<p>
+								Name:
+								{{ race.Circuit.circuitName }}
+							</p>
+							<p>Location:
+								{{ race.Circuit.Location.locality }},
+								{{ race.Circuit.Location.country }}</p>
+							<div class="info_link">
+								<a href="{{ race.Circuit.url }}">More info</a>
+								<span class="material-symbols-outlined">open_in_new</span>
+							</div>
+						</div>
 					</div>
 				</div>
 			{% endfor %}

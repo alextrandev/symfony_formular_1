@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.wrapper {
+  background-color: white;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  border: 2px dashed black;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: rgb(239, 239, 239);
+  box-shadow: 0 0 3px gray;
+}
+
+.card p {
+  font-size: small;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.info {
+  display: flex;
+  gap: 30px;
+}
+
+.race_info,
+.track_info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info_link {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: small;
+}
+
+.material-symbols-outlined {
+  font-size: inherit;
+}
